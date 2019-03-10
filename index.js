@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./botConfig.json");
@@ -27,3 +28,19 @@ client.on("message", async message => {
 }); //END
 
 client.login(token.token); //Login.
+=======
+const botConfig = require("./botConfig.json");
+const tokenBot = require("./token.json");
+Discord = require("discord.js");
+const bot = new Discord.Client({disableEveryone: true});
+
+bot.on("ready", async () => {
+    console.log('${bot.user.username} is online!');
+    bot.user.setActivity("Debugging your shit code!");
+});
+bot.on("message", async message => {
+    let prefix = botConfig.prefix;
+});
+
+bot.login(tokenBot.token);
+>>>>>>> Stashed changes
